@@ -82,7 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/column.h">
+			<Option target="xmlDatabase"/>
+		</Unit>
 		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/main.cpp">
+			<Option target="xmlDatabase"/>
+		</Unit>
+		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h">
+			<Option target="xmlDatabase"/>
+		</Unit>
+		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.cpp">
+			<Option target="xmlDatabase"/>
+		</Unit>
+		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.h">
 			<Option target="xmlDatabase"/>
 		</Unit>
 		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/CMakeLists.txt">

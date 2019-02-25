@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/xmlDatabase.dir/main.cpp.o"
+  "CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o"
   "xmlDatabase.pdb"
   "xmlDatabase"
 )

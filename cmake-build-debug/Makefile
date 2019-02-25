@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+xmlDatabase.o: xmlDatabase.cpp.o
+
+.PHONY : xmlDatabase.o
+
+# target to build an object file
+xmlDatabase.cpp.o:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o
+.PHONY : xmlDatabase.cpp.o
+
+xmlDatabase.i: xmlDatabase.cpp.i
+
+.PHONY : xmlDatabase.i
+
+# target to preprocess a source file
+xmlDatabase.cpp.i:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.i
+.PHONY : xmlDatabase.cpp.i
+
+xmlDatabase.s: xmlDatabase.cpp.s
+
+.PHONY : xmlDatabase.s
+
+# target to generate assembly for a file
+xmlDatabase.cpp.s:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.s
+.PHONY : xmlDatabase.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... xmlDatabase.o"
+	@echo "... xmlDatabase.i"
+	@echo "... xmlDatabase.s"
 .PHONY : help
 
 
