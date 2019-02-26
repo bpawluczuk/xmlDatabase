@@ -16,40 +16,120 @@
 using namespace std;
 using namespace tinyxml2;
 
+/**
+ * class XmlDatabase
+ */
 class XmlDatabase {
 public:
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     int connect(const char *name);
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     int create(const char *name);
 
+    /**
+     *
+     * @return
+     */
     list<Record *> select();
 
+    /**
+     *
+     * @param where
+     * @return
+     */
     list<Record *> select(Record *where);
 
+    /**
+     *
+     * @param record
+     * @return
+     */
     int insert(Record *record);
 
+    /**
+     *
+     * @param id
+     */
     void remove(const char *id);
 
-    bool addColumn(const char *name);
-
-    bool removeColumn(const char *name);
-
-    int count();
-
-    vector<const char *> getSchema();
-
-    Record *findRecordById(const char *id);
-
+    /**
+     *
+     * @param record
+     */
     void update(Record *record);
 
-    bool columnExist(const char *name);
+    /**
+     *
+     * @param name
+     * @return
+     */
+    bool insertColumn(const char *name);
+
+    /**
+     *
+     * @param name
+     * @return
+     */
+    bool removeColumn(const char *name);
+
+    /**
+     *
+     * @return
+     */
+    vector<const char *> getSchema();
+
+    /**
+     *
+     * @return
+     */
+    int count();
 
 private:
+
+    /**
+     *
+     */
     const char *dbName;
+
+    /**
+     *
+     */
     XMLDocument xmlDocument;
 
+    /**
+     *
+     * @param name
+     * @return
+     */
+    bool columnExist(const char *name);
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    Record *findRecordById(const char *id);
+
+    /**
+     *
+     * @return
+     */
     XMLNode *xmlGetRootNode();
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     XMLNode *xmlFindRecordById(const char *id);
 };

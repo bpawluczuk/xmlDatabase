@@ -11,20 +11,52 @@
 
 using namespace std;
 
+/**
+ *
+ */
 class Column {
 public:
 
+    /**
+     *
+     * @param key
+     * @param value
+     */
     Column(const char *key, const char *value);
 
+    /**
+     *
+     * @param key
+     */
     void setKey(const char *key);
 
+    /**
+     *
+     * @param value
+     */
     void setValue(const char *value);
 
+    /**
+     *
+     * @return
+     */
     const char *getKey() const;
 
+    /**
+     *
+     * @return
+     */
     const char *getValue() const;
 
 private:
+
+    /**
+     *
+     */
     const char *key;
+
+    /**
+     *
+     */
     const char *value;
 };

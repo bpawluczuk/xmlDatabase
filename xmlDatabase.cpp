@@ -10,11 +10,20 @@
 using namespace std;
 using namespace tinyxml2;
 
+/**
+ *
+ * @return
+ */
 XMLNode *XmlDatabase::xmlGetRootNode() {
     XMLNode *pRoot = XmlDatabase::xmlDocument.FirstChild();
     return pRoot;
 }
 
+/**
+ *
+ * @param name
+ * @return
+ */
 int XmlDatabase::connect(const char *name) {
 
     XMLError result = XmlDatabase::xmlDocument.LoadFile(name);
@@ -35,6 +44,11 @@ int XmlDatabase::connect(const char *name) {
     return true;
 }
 
+/**
+ *
+ * @param name
+ * @return
+ */
 int XmlDatabase::create(const char *name) {
 
     XMLNode *pRoot = XmlDatabase::xmlDocument.NewElement("Database");
@@ -51,6 +65,11 @@ int XmlDatabase::create(const char *name) {
     return true;
 }
 
+/**
+ *
+ * @param record
+ * @return
+ */
 int XmlDatabase::insert(Record *record) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
@@ -82,6 +101,10 @@ int XmlDatabase::insert(Record *record) {
     return true;
 }
 
+/**
+ *
+ * @return
+ */
 int XmlDatabase::count() {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
@@ -94,6 +117,11 @@ int XmlDatabase::count() {
     return inc;
 }
 
+/**
+ *
+ * @param name
+ * @return
+ */
 bool XmlDatabase::columnExist(const char *name) {
 
     vector<const char *> schema = XmlDatabase::getSchema();
@@ -106,6 +134,10 @@ bool XmlDatabase::columnExist(const char *name) {
     return false;
 }
 
+/**
+ *
+ * @return
+ */
 vector<const char *> XmlDatabase::getSchema() {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
@@ -122,6 +154,11 @@ vector<const char *> XmlDatabase::getSchema() {
     return result;
 }
 
+/**
+ *
+ * @param name
+ * @return
+ */
 bool XmlDatabase::removeColumn(const char *name) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
@@ -142,7 +179,12 @@ bool XmlDatabase::removeColumn(const char *name) {
     return true;
 }
 
-bool XmlDatabase::addColumn(const char *name) {
+/**
+ *
+ * @param name
+ * @return
+ */
+bool XmlDatabase::insertColumn(const char *name) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
 
@@ -160,6 +202,10 @@ bool XmlDatabase::addColumn(const char *name) {
     return true;
 }
 
+/**
+ *
+ * @param id
+ */
 void XmlDatabase::remove(const char *id) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
@@ -171,6 +217,11 @@ void XmlDatabase::remove(const char *id) {
     }
 }
 
+/**
+ *
+ * @param id
+ * @return
+ */
 XMLNode *XmlDatabase::xmlFindRecordById(const char *id) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
@@ -185,6 +236,11 @@ XMLNode *XmlDatabase::xmlFindRecordById(const char *id) {
     return nullptr;
 }
 
+/**
+ *
+ * @param id
+ * @return
+ */
 Record *XmlDatabase::findRecordById(const char *id) {
 
     XMLNode *node = XmlDatabase::xmlFindRecordById(id);
@@ -203,6 +259,10 @@ Record *XmlDatabase::findRecordById(const char *id) {
     return record;
 }
 
+/**
+ *
+ * @param record
+ */
 void XmlDatabase::update(Record *record) {
 
     const char *id = record->getId();
@@ -222,6 +282,10 @@ void XmlDatabase::update(Record *record) {
     }
 }
 
+/**
+ *
+ * @return
+ */
 list<Record *> XmlDatabase::select() {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
@@ -240,6 +304,11 @@ list<Record *> XmlDatabase::select() {
     return result;
 }
 
+/**
+ *
+ * @param where
+ * @return
+ */
 list<Record *> XmlDatabase::select(Record *where) {
 
     list<Record *> result;

@@ -9,15 +9,34 @@ Column::Column(const char *key, const char *value){
     Column::setValue(value);
 }
 
+/**
+ *
+ * @param key
+ */
 void Column::setKey(const char *key) {
     Column::key = key;
 }
+
+/**
+ *
+ * @param value
+ */
 void Column::setValue(const char *value) {
     Column::value = value;
 }
+
+/**
+ *
+ * @return
+ */
 const char *Column::getKey() const {
     return key;
 }
+
+/**
+ *
+ * @return
+ */
 const char *Column::getValue() const {
     return value;
 }
