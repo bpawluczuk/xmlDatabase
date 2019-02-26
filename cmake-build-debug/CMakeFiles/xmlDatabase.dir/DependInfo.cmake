@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/bpawluczuk/Sites/cpp/xmlDatabase/column.cpp" "/Users/bpawluczuk/Sites/cpp/xmlDatabase/cmake-build-debug/CMakeFiles/xmlDatabase.dir/column.cpp.o"
   "/Users/bpawluczuk/Sites/cpp/xmlDatabase/main.cpp" "/Users/bpawluczuk/Sites/cpp/xmlDatabase/cmake-build-debug/CMakeFiles/xmlDatabase.dir/main.cpp.o"
+  "/Users/bpawluczuk/Sites/cpp/xmlDatabase/record.cpp" "/Users/bpawluczuk/Sites/cpp/xmlDatabase/cmake-build-debug/CMakeFiles/xmlDatabase.dir/record.cpp.o"
   "/Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.cpp" "/Users/bpawluczuk/Sites/cpp/xmlDatabase/cmake-build-debug/CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

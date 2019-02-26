@@ -6,30 +6,23 @@
 #define XMLDATABASE_COLUMN_H
 
 #endif //XMLDATABASE_COLUMN_H
+
 #include <iostream>
 
 using namespace std;
 
-class Column{
+class Column {
 public:
 
-    Column(const char *key, const char *value){
-        Column::setKey(key);
-        Column::setValue(value);
-    }
+    Column(const char *key, const char *value);
 
-    void setKey(const char *key) {
-        Column::key = key;
-    }
-    void setValue(const char *value) {
-        Column::value = value;
-    }
-    const char *getKey() const {
-        return key;
-    }
-    const char *getValue() const {
-        return value;
-    }
+    void setKey(const char *key);
+
+    void setValue(const char *value);
+
+    const char *getKey() const;
+
+    const char *getValue() const;
 
 private:
     const char *key;

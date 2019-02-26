@@ -13,57 +13,19 @@
 
 class Record {
 public:
-    void addColumn(Column *column) {
-        Record::ownColumns.push_back(column);
-    }
+    void addColumn(Column *column);
 
-    vector<Column *> getColumns() {
-        return Record::ownColumns;
-    }
+    vector<Column *> getColumns();
 
-    const char *getId() {
-        for (auto column : Record::ownColumns) {
-            if (strcmp(column->getKey(), "ID") == 0) {
-                return column->getValue();
-            }
-        }
-        return nullptr;
-    }
+    const char *getId();
 
-    const char *getColumnValue(const char *name) {
-        for (auto column : Record::ownColumns) {
-            if (strcmp(column->getKey(), name) == 0) {
-                return column->getValue();
-            }
-        }
-        return nullptr;
-    }
+    const char *getColumnValue(const char *name);
 
-    void updateColumnValue(const char *key, const char *value) {
-        for (auto column : Record::ownColumns) {
-            if (strcmp(column->getKey(), key) == 0) {
-                column->setValue(value);
-            }
-        }
-    }
+    void updateColumnValue(const char *key, const char *value);
 
-    void updateColumnValue(Column *updateColumn) {
-        for (auto column : Record::ownColumns) {
-            if (strcmp(column->getKey(), updateColumn->getKey()) == 0) {
-                column->setValue(updateColumn->getValue());
-            }
-        }
-    }
+    void updateColumnValue(Column *updateColumn);
 
-    void updateColumnValue(vector<Column *> updateColumns) {
-        for (auto update : updateColumns) {
-            for (auto column : Record::ownColumns) {
-                if (strcmp(column->getKey(), update->getKey()) == 0) {
-                    column->setValue(update->getValue());
-                }
-            }
-        }
-    }
+    void updateColumnValue(vector<Column *> updateColumns);
 
 private:
     vector<Column *> ownColumns;

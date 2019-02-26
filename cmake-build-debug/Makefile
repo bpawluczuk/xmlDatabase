@@ -123,6 +123,33 @@ xmlDatabase/fast:
 	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/build
 .PHONY : xmlDatabase/fast
 
+column.o: column.cpp.o
+
+.PHONY : column.o
+
+# target to build an object file
+column.cpp.o:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/column.cpp.o
+.PHONY : column.cpp.o
+
+column.i: column.cpp.i
+
+.PHONY : column.i
+
+# target to preprocess a source file
+column.cpp.i:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/column.cpp.i
+.PHONY : column.cpp.i
+
+column.s: column.cpp.s
+
+.PHONY : column.s
+
+# target to generate assembly for a file
+column.cpp.s:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/column.cpp.s
+.PHONY : column.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -149,6 +176,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+record.o: record.cpp.o
+
+.PHONY : record.o
+
+# target to build an object file
+record.cpp.o:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/record.cpp.o
+.PHONY : record.cpp.o
+
+record.i: record.cpp.i
+
+.PHONY : record.i
+
+# target to preprocess a source file
+record.cpp.i:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/record.cpp.i
+.PHONY : record.cpp.i
+
+record.s: record.cpp.s
+
+.PHONY : record.s
+
+# target to generate assembly for a file
+record.cpp.s:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/record.cpp.s
+.PHONY : record.cpp.s
 
 xmlDatabase.o: xmlDatabase.cpp.o
 
@@ -186,9 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... xmlDatabase"
+	@echo "... column.o"
+	@echo "... column.i"
+	@echo "... column.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... record.o"
+	@echo "... record.i"
+	@echo "... record.s"
 	@echo "... xmlDatabase.o"
 	@echo "... xmlDatabase.i"
 	@echo "... xmlDatabase.s"
