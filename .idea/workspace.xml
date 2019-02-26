@@ -11,30 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94bcd731-a270-40e6-8c5e-403b7415c784" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/column.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/record.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinyxml2-master/tinyxml2.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinyxml2-master/tinyxml2.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinyxml2-master/tinyxml2.pc.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinyxml2-master/xmltest.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xmlDatabase.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xmlDatabase.h" afterDir="false" />
+    <list default="true" id="94bcd731-a270-40e6-8c5e-403b7415c784" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/xmlDatabase.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/xmlDatabase.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmlDatabase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/xmlDatabase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmlDatabase.h" beforeDir="false" afterPath="$PROJECT_DIR$/xmlDatabase.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,8 +60,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="3542" />
-          <entry key="h" value="976" />
+          <entry key="cpp" value="3609" />
+          <entry key="h" value="978" />
           <entry key="txt" value="4" />
           <entry key="xml" value="75" />
         </counts>
@@ -88,7 +69,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Doxygen file" value="2" />
-          <entry key="ObjectiveC" value="4516" />
+          <entry key="ObjectiveC" value="4585" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="75" />
         </counts>
@@ -102,11 +83,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="641">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -117,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xmlDatabase.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+            <state relative-caret-position="370">
+              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
               <folding>
                 <element signature="e#157#176#0" expanded="true" />
               </folding>
@@ -126,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xmlDatabase.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5592">
-              <caret line="233" column="46" lean-forward="true" selection-start-line="233" selection-start-column="46" selection-end-line="233" selection-end-column="46" />
+            <state relative-caret-position="2575">
+              <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
               <folding>
                 <element signature="e#51#70#0" expanded="true" />
               </folding>
@@ -188,11 +169,11 @@
         <option value="$PROJECT_DIR$/Record.h" />
         <option value="$PROJECT_DIR$/result.h" />
         <option value="$PROJECT_DIR$/column.h" />
-        <option value="$PROJECT_DIR$/xmlDatabase.h" />
         <option value="$PROJECT_DIR$/cmake-build-debug/baza.xml" />
         <option value="$PROJECT_DIR$/record.h" />
-        <option value="$PROJECT_DIR$/xmlDatabase.cpp" />
+        <option value="$PROJECT_DIR$/xmlDatabase.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/xmlDatabase.cpp" />
       </list>
     </option>
   </component>
@@ -296,7 +277,7 @@
       <workItem from="1550958616122" duration="9893000" />
       <workItem from="1550999534285" duration="24069000" />
       <workItem from="1551044752149" duration="257000" />
-      <workItem from="1551046953081" duration="40253000" />
+      <workItem from="1551046953081" duration="41512000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1550956294471</created>
@@ -305,22 +286,29 @@
       <option name="project" value="LOCAL" />
       <updated>1550956294471</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1551132736514</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551132736514</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76271000" />
+    <option name="totallyTimeSpent" value="77530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1953602" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2244898" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2244898" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -357,7 +345,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/xmlDatabase.cpp</url>
-          <line>149</line>
+          <line>164</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -372,8 +360,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>23</line>
+          <line>43</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/xmlDatabase.cpp</url>
+          <line>98</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -445,20 +438,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xmlDatabase.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="370">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
           <folding>
             <element signature="e#157#176#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xmlDatabase.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5592">
-          <caret line="233" column="46" lean-forward="true" selection-start-line="233" selection-start-column="46" selection-end-line="233" selection-end-column="46" />
+        <state relative-caret-position="641">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
           <folding>
-            <element signature="e#51#70#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -470,12 +463,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/xmlDatabase.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="2575">
+          <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#51#70#0" expanded="true" />
           </folding>
         </state>
       </provider>

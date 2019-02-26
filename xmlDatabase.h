@@ -33,6 +33,8 @@ public:
 
     bool addColumn(const char *name);
 
+    bool removeColumn(const char *name);
+
     int count();
 
     vector<const char *> getSchema();

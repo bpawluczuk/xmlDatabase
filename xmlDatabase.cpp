@@ -122,6 +122,26 @@ vector<const char *> XmlDatabase::getSchema() {
     return result;
 }
 
+bool XmlDatabase::removeColumn(const char *name) {
+
+    XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
+
+    if (strcmp(name, "ID") == 0) {
+        return false;
+    }
+
+    for (XMLElement *pSchema = pRoot->FirstChildElement("Schema"); pSchema != 0; pSchema = pSchema->NextSiblingElement()) {
+        XMLElement *child = pSchema->FirstChildElement(name);
+        if (child) {
+            pSchema->DeleteChild(child);
+        }
+    }
+
+    XmlDatabase::xmlDocument.SaveFile(XmlDatabase::dbName);
+
+    return true;
+}
+
 bool XmlDatabase::addColumn(const char *name) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
@@ -130,12 +150,7 @@ bool XmlDatabase::addColumn(const char *name) {
         return false;
     }
 
-    XMLElement *pSchema = pRoot->FirstChildElement("Schema");
-    XMLElement *pSchemaElement = XmlDatabase::xmlDocument.NewElement(name);
-    pSchema->InsertEndChild(pSchemaElement);
-
-
-    for (XMLElement *node = pRoot->FirstChildElement("Record"); node != 0; node = node->NextSiblingElement()) {
+    for (XMLElement *node = pRoot->FirstChildElement("Schema"); node != 0; node = node->NextSiblingElement()) {
         XMLElement *pElement = XmlDatabase::xmlDocument.NewElement(name);
         node->InsertEndChild(pElement);
     }
@@ -229,7 +244,7 @@ list<Record *> XmlDatabase::select(Record *where) {
 
     list<Record *> result;
     bool addRecord = false;
-    const char * word;
+    const char *word;
 
     for (auto record: XmlDatabase::select()) {
         for (auto column: record->getColumns()) {
