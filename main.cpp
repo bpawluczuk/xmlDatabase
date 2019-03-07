@@ -31,7 +31,26 @@ int main() {
     cout << dataSet.getCellValue(3,2) << endl;
 
 
+//    if (r) {
+//        r->updateColumnValue(new Column("Type", "GITARA"));
+//        db.update(r);
+//    }
 
+//    db.insertColumn("Type");
+//    db.insertColumn("Name");
+//    db.insertColumn("Desc");
+//
+//    Record *record = new Record();
+//    record->addColumn(new Column("Type", "GITARA"));
+//    record->addColumn(new Column("Name", "Kult"));
+//    record->addColumn(new Column("Desc", "uuuu"));
+//    db.insert(record);
+
+//    db.removeColumn("Desc");
+//    Record *record = new Record();
+//    record->addColumn(new Column("Type", "ARA"));
+//    record->addColumn(new Column("Name", "Ku"));
+//    list<Record *> lista = db.select(record);
 
     return 0;
 }

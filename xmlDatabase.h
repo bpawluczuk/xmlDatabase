@@ -23,153 +23,107 @@ using namespace tinyxml2;
 
 /**
  * class XmlDatabase
+ * This class represents database,
+ * This class defines methods who are needed for manage of database, creates and fill simple ORM objects
  */
 class XmlDatabase {
 public:
 
     /**
-     *
+     * Connect to database file *.xml
      * @param name
      * @return
      */
     int connect(const char *name);
 
     /**
-     *
+     * Create database file *.xml
      * @param name
      * @return
      */
     int create(const char *name);
 
     /**
-     *
+     * Return all records from database who is currently set
      * @return
      */
     list<Record *> select();
 
     /**
-     *
+     * Return all records who meet the condition where
      * @param where
      * @return
      */
     list<Record *> select(Record *where);
 
     /**
-     *
+     * Insert record to database
      * @param record
      * @return
      */
     int insert(Record *record);
 
     /**
-     *
+     * Remove record from database
      * @param id
      */
     void remove(const char *id);
 
     /**
-     *
+     * Update record to database
      * @param record
      */
     void update(Record *record);
 
     /**
-     *
+     * Alter database schema and add new column
      * @param name
      * @return
      */
     bool insertColumn(const char *name);
 
     /**
-     *
+     * Alter database and remove column
      * @param name
      * @return
      */
     bool removeColumn(const char *name);
 
     /**
-     *
+     * Get database schema
      * @return
      */
     vector<const char *> getSchema();
 
     /**
-     *
+     * Get column count
      * @return
      */
     int columnCount();
 
     /**
-     *
+     * Get specify database path
      * @param name
      * @return
      */
     const char *getDatabasePath(const char *name);
 
     /**
-     *
+     * Get data set
      * @return
      */
     DataSet getDataSet();
 
 private:
 
-    /**
-     *
-     */
     const char *dbName;
-
-    /**
-     *
-     */
     const char *dbPath;
-
-    /**
-     *
-     */
     XMLDocument xmlDocument;
-
-    /**
-     *
-    */
     DataSet dataSet;
-
-    /**
-     *
-     * @param name
-     */
     void saveFile(const char *name);
-
-    /**
-     *
-     * @param name
-    */
     bool createDatabaseDirectory();
-
-    /**
-     *
-     * @param name
-     * @return
-     */
     bool columnExist(const char *name);
-
-    /**
-     *
-     * @param id
-     * @return
-     */
     Record *findRecordById(const char *id);
-
-    /**
-     *
-     * @return
-     */
     XMLNode *xmlGetRootNode();
-
-    /**
-     *
-     * @param id
-     * @return
-     */
     XMLNode *xmlFindRecordById(const char *id);
 };
