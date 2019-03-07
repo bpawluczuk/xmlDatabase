@@ -3,12 +3,16 @@
 //
 #include "record.h"
 
+Record::Record(int index) {
+    Record::setIndex(index);
+}
+
 /**
  *
  * @param column
  */
 void Record::addColumn(Column *column) {
-    Record::ownColumns.push_back(column);
+    Record::columns.push_back(column);
 }
 
 /**
@@ -16,7 +20,7 @@ void Record::addColumn(Column *column) {
  * @return
  */
 vector<Column *> Record::getColumns() {
-    return Record::ownColumns;
+    return Record::columns;
 }
 
 /**
@@ -24,7 +28,7 @@ vector<Column *> Record::getColumns() {
  * @return
  */
 const char *Record::getId() {
-    for (auto column : Record::ownColumns) {
+    for (auto column : Record::columns) {
         if (strcmp(column->getKey(), "ID") == 0) {
             return column->getValue();
         }
@@ -38,7 +42,7 @@ const char *Record::getId() {
  * @return
  */
 const char *Record::getColumnValue(const char *name) {
-    for (auto column : Record::ownColumns) {
+    for (auto column : Record::columns) {
         if (strcmp(column->getKey(), name) == 0) {
             return column->getValue();
         }
@@ -52,7 +56,7 @@ const char *Record::getColumnValue(const char *name) {
  * @param value
  */
 void Record::updateColumnValue(const char *key, const char *value) {
-    for (auto column : Record::ownColumns) {
+    for (auto column : Record::columns) {
         if (strcmp(column->getKey(), key) == 0) {
             column->setValue(value);
         }
@@ -64,7 +68,7 @@ void Record::updateColumnValue(const char *key, const char *value) {
  * @param updateColumn
  */
 void Record::updateColumnValue(Column *updateColumn) {
-    for (auto column : Record::ownColumns) {
+    for (auto column : Record::columns) {
         if (strcmp(column->getKey(), updateColumn->getKey()) == 0) {
             column->setValue(updateColumn->getValue());
         }
@@ -77,10 +81,26 @@ void Record::updateColumnValue(Column *updateColumn) {
  */
 void Record::updateColumnValue(vector<Column *> updateColumns) {
     for (auto update : updateColumns) {
-        for (auto column : Record::ownColumns) {
+        for (auto column : Record::columns) {
             if (strcmp(column->getKey(), update->getKey()) == 0) {
                 column->setValue(update->getValue());
             }
         }
     }
+}
+
+/**
+ *
+ * @param index
+ */
+void Record::setIndex(int index) {
+    Record::index = index;
+}
+
+/**
+ *
+ * @return
+ */
+int Record::getIndex() const {
+    return index;
 }

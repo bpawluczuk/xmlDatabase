@@ -4,7 +4,13 @@
 CMakeFiles/xmlDatabase.dir/column.cpp.o: ../column.cpp
 CMakeFiles/xmlDatabase.dir/column.cpp.o: ../column.h
 
+CMakeFiles/xmlDatabase.dir/dataset.cpp.o: ../column.h
+CMakeFiles/xmlDatabase.dir/dataset.cpp.o: ../dataset.cpp
+CMakeFiles/xmlDatabase.dir/dataset.cpp.o: ../dataset.h
+CMakeFiles/xmlDatabase.dir/dataset.cpp.o: ../record.h
+
 CMakeFiles/xmlDatabase.dir/main.cpp.o: ../column.h
+CMakeFiles/xmlDatabase.dir/main.cpp.o: ../dataset.h
 CMakeFiles/xmlDatabase.dir/main.cpp.o: ../main.cpp
 CMakeFiles/xmlDatabase.dir/main.cpp.o: ../record.h
 CMakeFiles/xmlDatabase.dir/main.cpp.o: ../tinyxml2-master/tinyxml2.h
@@ -15,6 +21,7 @@ CMakeFiles/xmlDatabase.dir/record.cpp.o: ../record.cpp
 CMakeFiles/xmlDatabase.dir/record.cpp.o: ../record.h
 
 CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o: ../column.h
+CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o: ../dataset.h
 CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o: ../record.h
 CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o: ../tinyxml2-master/tinyxml2.cpp
 CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o: ../tinyxml2-master/tinyxml2.h

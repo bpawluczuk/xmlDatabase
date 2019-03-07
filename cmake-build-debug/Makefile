@@ -150,6 +150,33 @@ column.cpp.s:
 	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/column.cpp.s
 .PHONY : column.cpp.s
 
+dataset.o: dataset.cpp.o
+
+.PHONY : dataset.o
+
+# target to build an object file
+dataset.cpp.o:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/dataset.cpp.o
+.PHONY : dataset.cpp.o
+
+dataset.i: dataset.cpp.i
+
+.PHONY : dataset.i
+
+# target to preprocess a source file
+dataset.cpp.i:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/dataset.cpp.i
+.PHONY : dataset.cpp.i
+
+dataset.s: dataset.cpp.s
+
+.PHONY : dataset.s
+
+# target to generate assembly for a file
+dataset.cpp.s:
+	$(MAKE) -f CMakeFiles/xmlDatabase.dir/build.make CMakeFiles/xmlDatabase.dir/dataset.cpp.s
+.PHONY : dataset.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -243,6 +270,9 @@ help:
 	@echo "... column.o"
 	@echo "... column.i"
 	@echo "... column.s"
+	@echo "... dataset.o"
+	@echo "... dataset.i"
+	@echo "... dataset.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

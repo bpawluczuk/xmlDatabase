@@ -12,7 +12,7 @@
 using namespace std;
 
 /**
- *
+ * class Column
  */
 class Column {
 public:
@@ -22,7 +22,7 @@ public:
      * @param key
      * @param value
      */
-    Column(const char *key, const char *value);
+    Column(const char *key, const char *value, int index = 0);
 
     /**
      *
@@ -48,6 +48,18 @@ public:
      */
     const char *getValue() const;
 
+    /**
+     *
+     * @param index
+     */
+    void setIndex(int index);
+
+    /**
+     *
+     * @return
+     */
+    int getIndex() const;
+
 private:
 
     /**
@@ -59,4 +71,9 @@ private:
      *
      */
     const char *value;
+
+    /**
+     *
+    */
+    int index;
 };

@@ -4,9 +4,10 @@
 
 #include "column.h"
 
-Column::Column(const char *key, const char *value){
+Column::Column(const char *key, const char *value, int index){
     Column::setKey(key);
     Column::setValue(value);
+    Column::setIndex(index);
 }
 
 /**
@@ -39,4 +40,12 @@ const char *Column::getKey() const {
  */
 const char *Column::getValue() const {
     return value;
+}
+
+void Column::setIndex(int index) {
+    Column::index = index;
+}
+
+int Column::getIndex() const {
+    return index;
 }

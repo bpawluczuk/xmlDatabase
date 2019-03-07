@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include <map>
+#include <sys/stat.h>
 #include "xmlDatabase.h"
 #include "tinyxml2-master/tinyxml2.h"
 #include "tinyxml2-master/tinyxml2.cpp"
@@ -24,11 +25,22 @@ XMLNode *XmlDatabase::xmlGetRootNode() {
  * @param name
  * @return
  */
+const char *XmlDatabase::getDatabasePath(const char *name) {
+    return (string("/Users/bpawluczuk/database/") + string(name)).c_str();
+}
+
+/**
+ *
+ * @param name
+ * @return
+ */
 int XmlDatabase::connect(const char *name) {
 
-    XMLError result = XmlDatabase::xmlDocument.LoadFile(name);
+    const char *path = XmlDatabase::getDatabasePath(name);
+
+    XMLError result = XmlDatabase::xmlDocument.LoadFile(path);
     if (result != XML_SUCCESS) {
-        cout << "Unable connect to database " << name << endl;
+        cout << "Unable connect to database " << XmlDatabase::getDatabasePath(name) << endl;
         return false;
     }
 
@@ -60,9 +72,37 @@ int XmlDatabase::create(const char *name) {
     XMLNode *pId = XmlDatabase::xmlDocument.NewElement("ID");
     pShema->InsertFirstChild(pId);
 
-    XmlDatabase::xmlDocument.SaveFile(name);
+    XmlDatabase::createDatabaseDirectory();
+    XmlDatabase::saveFile(name);
 
     return true;
+}
+
+/**
+ *
+ * @param name
+ */
+bool XmlDatabase::createDatabaseDirectory() {
+
+    if (mkdir("/Users/bpawluczuk/database", 0777) == -1) {
+        cerr << "Error :  " << strerror(errno) << endl;
+        return false;
+    } else {
+        cout << "Directory created";
+        return true;
+    }
+}
+
+/**
+ *
+ * @param name
+ */
+void XmlDatabase::saveFile(const char *name) {
+
+    XMLError error = XmlDatabase::xmlDocument.SaveFile(XmlDatabase::getDatabasePath(name));
+    if (error) {
+        cout << "Can't save file: " << XmlDatabase::getDatabasePath(name) << endl;
+    }
 }
 
 /**
@@ -73,7 +113,7 @@ int XmlDatabase::create(const char *name) {
 int XmlDatabase::insert(Record *record) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
-    int count = XmlDatabase::count() + 1;
+    int count = XmlDatabase::columnCount() + 1;
 
     XMLElement *pNode = XmlDatabase::xmlDocument.NewElement("Record");
     pNode->SetAttribute("type", "record");
@@ -96,7 +136,7 @@ int XmlDatabase::insert(Record *record) {
         pNode->InsertEndChild(pElement);
     }
 
-    XmlDatabase::xmlDocument.SaveFile(XmlDatabase::dbName);
+    XmlDatabase::saveFile(XmlDatabase::dbName);
 
     return true;
 }
@@ -105,7 +145,7 @@ int XmlDatabase::insert(Record *record) {
  *
  * @return
  */
-int XmlDatabase::count() {
+int XmlDatabase::columnCount() {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
 
@@ -167,14 +207,15 @@ bool XmlDatabase::removeColumn(const char *name) {
         return false;
     }
 
-    for (XMLElement *pSchema = pRoot->FirstChildElement("Schema"); pSchema != 0; pSchema = pSchema->NextSiblingElement()) {
+    for (XMLElement *pSchema = pRoot->FirstChildElement("Schema");
+         pSchema != 0; pSchema = pSchema->NextSiblingElement()) {
         XMLElement *child = pSchema->FirstChildElement(name);
         if (child) {
             pSchema->DeleteChild(child);
         }
     }
 
-    XmlDatabase::xmlDocument.SaveFile(XmlDatabase::dbName);
+    XmlDatabase::saveFile(XmlDatabase::dbName);
 
     return true;
 }
@@ -197,7 +238,7 @@ bool XmlDatabase::insertColumn(const char *name) {
         node->InsertEndChild(pElement);
     }
 
-    XmlDatabase::xmlDocument.SaveFile(XmlDatabase::dbName);
+    XmlDatabase::saveFile(XmlDatabase::dbName);
 
     return true;
 }
@@ -213,7 +254,7 @@ void XmlDatabase::remove(const char *id) {
 
     if (node) {
         pRoot->DeleteChild(node);
-        XmlDatabase::xmlDocument.SaveFile(XmlDatabase::dbName);
+        XmlDatabase::saveFile(XmlDatabase::dbName);
     }
 }
 
@@ -278,7 +319,7 @@ void XmlDatabase::update(Record *record) {
             }
         }
 
-        XmlDatabase::xmlDocument.SaveFile(XmlDatabase::dbName);
+        XmlDatabase::saveFile(XmlDatabase::dbName);
     }
 }
 
@@ -288,18 +329,24 @@ void XmlDatabase::update(Record *record) {
  */
 list<Record *> XmlDatabase::select() {
 
+    int indexColumn = 0;
+    int indexRow = 0;
+
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
     list<Record *> result;
 
     for (XMLElement *node = pRoot->FirstChildElement("Record"); node != 0; node = node->NextSiblingElement()) {
-        Record *record = new Record();
+        Record *record = new Record(indexRow++);
+        indexColumn = 0;
         for (XMLElement *child = node->FirstChildElement(); child != 0; child = child->NextSiblingElement()) {
 
-            Column *column = new Column(child->Name(), child->GetText());
+            Column *column = new Column(child->Name(), child->GetText(), indexColumn++);
             record->addColumn(column);
         }
         result.push_back(record);
     }
+
+    XmlDatabase::dataSet.setRecordList(result);
 
     return result;
 }
@@ -331,4 +378,8 @@ list<Record *> XmlDatabase::select(Record *where) {
     }
 
     return result;
+}
+
+DataSet XmlDatabase::getDataSet() {
+    return XmlDatabase::dataSet;
 }

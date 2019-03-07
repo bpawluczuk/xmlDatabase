@@ -88,6 +88,12 @@
 		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/column.h">
 			<Option target="xmlDatabase"/>
 		</Unit>
+		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.cpp">
+			<Option target="xmlDatabase"/>
+		</Unit>
+		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.h">
+			<Option target="xmlDatabase"/>
+		</Unit>
 		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/main.cpp">
 			<Option target="xmlDatabase"/>
 		</Unit>

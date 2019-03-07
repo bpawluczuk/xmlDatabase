@@ -11,7 +11,12 @@
 #include <map>
 #include <list>
 #include "tinyxml2-master/tinyxml2.h"
+
+#ifndef XMLDATABASE_RECORD_H
 #include "record.h"
+#endif
+
+#include "dataset.h"
 
 using namespace std;
 using namespace tinyxml2;
@@ -92,7 +97,20 @@ public:
      *
      * @return
      */
-    int count();
+    int columnCount();
+
+    /**
+     *
+     * @param name
+     * @return
+     */
+    const char *getDatabasePath(const char *name);
+
+    /**
+     *
+     * @return
+     */
+    DataSet getDataSet();
 
 private:
 
@@ -104,7 +122,29 @@ private:
     /**
      *
      */
+    const char *dbPath;
+
+    /**
+     *
+     */
     XMLDocument xmlDocument;
+
+    /**
+     *
+    */
+    DataSet dataSet;
+
+    /**
+     *
+     * @param name
+     */
+    void saveFile(const char *name);
+
+    /**
+     *
+     * @param name
+    */
+    bool createDatabaseDirectory();
 
     /**
      *

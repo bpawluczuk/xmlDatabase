@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o"
   "CMakeFiles/xmlDatabase.dir/record.cpp.o"
   "CMakeFiles/xmlDatabase.dir/column.cpp.o"
+  "CMakeFiles/xmlDatabase.dir/dataset.cpp.o"
   "xmlDatabase.pdb"
   "xmlDatabase"
 )

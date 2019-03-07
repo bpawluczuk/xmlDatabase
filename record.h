@@ -11,8 +11,13 @@
 #include <vector>
 #include "column.h"
 
+/**
+ * class Record
+ */
 class Record {
 public:
+
+    Record(int index = 0);
 
     /**
      *
@@ -58,10 +63,27 @@ public:
      */
     void updateColumnValue(vector<Column *> updateColumns);
 
+    /**
+     *
+     * @param index
+     */
+    void setIndex(int index);
+
+    /**
+     *
+     * @return
+     */
+    int getIndex() const;
+
 private:
 
     /**
      *
      */
-    vector<Column *> ownColumns;
+    vector<Column *> columns;
+
+    /**
+     *
+    */
+    int index;
 };
