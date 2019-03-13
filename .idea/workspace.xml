@@ -13,9 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94bcd731-a270-40e6-8c5e-403b7415c784" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/xmlDatabase.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/xmlDatabase" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/xmlDatabase" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/xmlDatabase.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/xmlDatabase.cbp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -30,27 +27,28 @@
     <session id="1184722057">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="4" />
-          <entry key="project.open.time.7" value="7" />
+          <entry key="project.open.time.7" value="9" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="__string" value="12" />
           <entry key="algorithm" value="1" />
-          <entry key="cpp" value="16" />
+          <entry key="cpp" value="21" />
           <entry key="dox" value="1" />
           <entry key="doxygen" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="h" value="14" />
+          <entry key="h" value="15" />
           <entry key="list" value="3" />
           <entry key="puml" value="1" />
           <entry key="vector" value="3" />
@@ -61,7 +59,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Doxygen file" value="1" />
-          <entry key="ObjectiveC" value="49" />
+          <entry key="ObjectiveC" value="55" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="PlantUML file" value="1" />
           <entry key="XML" value="14" />
@@ -69,7 +67,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="4728" />
+          <entry key="cpp" value="4746" />
           <entry key="h" value="3235" />
           <entry key="txt" value="10" />
           <entry key="xml" value="81" />
@@ -78,7 +76,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Doxygen file" value="108" />
-          <entry key="ObjectiveC" value="7855" />
+          <entry key="ObjectiveC" value="7873" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="XML" value="81" />
         </counts>
@@ -100,21 +98,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/database/baza.xml">
+        <entry file="file://$PROJECT_DIR$/xmlDatabase.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="2784">
+              <caret line="116" column="8" selection-start-line="28" selection-end-line="128" selection-end-column="2" />
+              <folding>
+                <element signature="e#157#176#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xmlDatabase.h">
+        <entry file="file://$PROJECT_DIR$/xmlDatabase.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            <state relative-caret-position="951">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
-                <element signature="e#157#176#0" expanded="true" />
+                <element signature="e#51#70#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,8 +124,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataset.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="1224">
+              <caret line="51" column="51" selection-start-line="22" selection-end-line="65" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataset.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -132,8 +142,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/column.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="8" selection-start-line="11" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="1464">
+              <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/column.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -141,8 +160,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/record.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="1920">
+              <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
               <folding>
                 <element signature="e#142#156#0" expanded="true" />
               </folding>
@@ -166,6 +185,7 @@
       <find>getRootNode</find>
       <find>add</find>
       <find>SaveFile</find>
+      <find>string</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,12 +206,12 @@
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/column.cpp" />
         <option value="$PROJECT_DIR$/record.cpp" />
-        <option value="$PROJECT_DIR$/xmlDatabase.cpp" />
         <option value="$PROJECT_DIR$/dataset.h" />
         <option value="$PROJECT_DIR$/column.h" />
         <option value="$PROJECT_DIR$/record.h" />
         <option value="$PROJECT_DIR$/xmlDatabase.h" />
         <option value="$PROJECT_DIR$/vvvv.h" />
+        <option value="$PROJECT_DIR$/xmlDatabase.cpp" />
       </list>
     </option>
   </component>
@@ -351,7 +371,11 @@
       <workItem from="1551962436609" duration="117000" />
       <workItem from="1551962595351" duration="363000" />
       <workItem from="1551964965938" duration="200000" />
-      <workItem from="1551965382142" duration="3377000" />
+      <workItem from="1551965382142" duration="3472000" />
+      <workItem from="1552226120973" duration="65000" />
+      <workItem from="1552251141454" duration="1944000" />
+      <workItem from="1552404356647" duration="132000" />
+      <workItem from="1552423420286" duration="175000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1550956294471</created>
@@ -402,11 +426,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551961900521</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit">
+      <created>1551987534828</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1551987534828</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106542000" />
+    <option name="totallyTimeSpent" value="108953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,7 +452,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23443224" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24542125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -496,23 +527,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tinyxml2-master/tinyxml2.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44838" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/baza.xml" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/database/baza.xml" />
-    <entry file="file://$PROJECT_DIR$/tinyxml2-master/tinyxml2.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="2168" selection-start-line="2168" selection-end-line="2168" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-369">
@@ -534,35 +553,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/column.cpp">
+    <entry file="file://$PROJECT_DIR$/umlclass.puml" />
+    <entry file="file://$PROJECT_DIR$/vvvv.h" />
+    <entry file="file://$USER_HOME$/database/baza.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="912">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/record.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="641">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset.cpp">
+    <entry file="file://$PROJECT_DIR$/tinyxml2-master/tinyxml2.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+        <state relative-caret-position="295">
+          <caret line="668" column="19" selection-start-line="668" selection-start-column="13" selection-end-line="668" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xmlDatabase.cpp">
+    <entry file="file://$PROJECT_DIR$/tinyxml2-master/tinyxml2.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6600">
-          <caret line="275" selection-start-line="275" selection-end-line="275" />
+        <state relative-caret-position="294">
+          <caret line="606" column="62" lean-forward="true" selection-start-line="606" selection-start-column="62" selection-end-line="606" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/umlclass.puml" />
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
@@ -573,53 +593,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/database/baza.xml">
+    <entry file="file://$PROJECT_DIR$/xmlDatabase.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="2784">
+          <caret line="116" column="8" selection-start-line="28" selection-end-line="128" selection-end-column="2" />
+          <folding>
+            <element signature="e#157#176#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="1224">
+          <caret line="51" column="51" selection-start-line="22" selection-end-line="65" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vvvv.h">
+    <entry file="file://$PROJECT_DIR$/dataset.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="816">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/column.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="8" selection-start-line="11" selection-end-line="11" selection-end-column="20" />
+        <state relative-caret-position="1464">
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/column.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/record.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="1920">
+          <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
           <folding>
             <element signature="e#142#156#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xmlDatabase.h">
+    <entry file="file://$PROJECT_DIR$/xmlDatabase.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="951">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
-            <element signature="e#157#176#0" expanded="true" />
+            <element signature="e#51#70#0" expanded="true" />
           </folding>
         </state>
       </provider>

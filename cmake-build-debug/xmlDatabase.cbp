@@ -103,9 +103,6 @@
 		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h">
 			<Option target="xmlDatabase"/>
 		</Unit>
-		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/vvvv.h">
-			<Option target="xmlDatabase"/>
-		</Unit>
 		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.cpp">
 			<Option target="xmlDatabase"/>
 		</Unit>
