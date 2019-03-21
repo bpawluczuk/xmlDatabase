@@ -9,6 +9,7 @@
 
 #include <map>
 #include <vector>
+#include "irecord.h"
 #include "column.h"
 
 /**
@@ -16,7 +17,7 @@
  * This class represents record of database,
  * This class defines object who contain table cells in one row
  */
-class Record {
+class Record : IRecord<Column>{
 public:
 
     /**
@@ -26,19 +27,13 @@ public:
     Record(int index = 0);
 
     /**
-     * Add new column to database schema
+     * Add new column to record
      * @param column
      */
     void addColumn(Column *column);
 
     /**
-     * @brief addColumns
-     * @param column
-     */
-    void addColumns(vector<Column *> columns);
-
-    /**
-     * Get column names from database schema
+     * Get all columns from record
      * @return
      */
     vector<Column *> getColumns();
@@ -55,25 +50,6 @@ public:
      * @return
      */
     const char *getColumnValue(const char *name);
-
-    /**
-     * Update column name by column name
-     * @param key
-     * @param value
-     */
-    void updateColumnValue(const char *key, const char *value);
-
-    /**
-     * Update column name by column object
-     * @param updateColumn
-     */
-    void updateColumnValue(Column *updateColumn);
-
-    /**
-     * Update column name by list of columns object
-     * @param updateColumns
-     */
-    void updateColumnValue(vector<Column *> updateColumns);
 
     /**
      * Set index of record

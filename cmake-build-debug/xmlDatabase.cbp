@@ -97,6 +97,9 @@
 		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/icolumn.h">
 			<Option target="xmlDatabase"/>
 		</Unit>
+		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/irecord.h">
+			<Option target="xmlDatabase"/>
+		</Unit>
 		<Unit filename="/Users/bpawluczuk/Sites/cpp/xmlDatabase/main.cpp">
 			<Option target="xmlDatabase"/>
 		</Unit>

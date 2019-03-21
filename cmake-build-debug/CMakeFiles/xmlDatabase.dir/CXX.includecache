@@ -12,6 +12,10 @@ iostream
 icolumn.h
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/icolumn.h
 
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.cpp
+dataset.h
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.h
+
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.h
 record.h
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
@@ -19,6 +23,10 @@ list
 -
 
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/icolumn.h
+
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/irecord.h
+vector
+-
 
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/main.cpp
 iostream
@@ -40,13 +48,33 @@ vector
 xmlDatabase.h
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.h
 
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/record.cpp
+record.h
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
+
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
 map
 -
 vector
 -
+irecord.h
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/irecord.h
 column.h
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/column.h
+
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/tinyxml2-master/tinyxml2.cpp
+tinyxml2.h
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/tinyxml2-master/tinyxml2.h
+new
+-
+stddef.h
+-
+stdarg.h
+-
+cstddef
+-
+cstdarg
+-
 
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/tinyxml2-master/tinyxml2.h
 ctype.h
@@ -77,6 +105,26 @@ android/log.h
 -
 assert.h
 -
+
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.cpp
+iostream
+-
+map
+-
+sys/stat.h
+-
+xmlDatabase.h
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.h
+tinyxml2-master/tinyxml2.h
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/tinyxml2-master/tinyxml2.h
+tinyxml2-master/tinyxml2.cpp
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/tinyxml2-master/tinyxml2.cpp
+stdio.h
+-
+string.h
+-
+dirent.h
+/Users/bpawluczuk/Sites/cpp/xmlDatabase/dirent.h
 
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.h
 iostream
