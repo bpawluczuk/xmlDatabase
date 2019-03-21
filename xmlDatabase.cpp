@@ -161,8 +161,8 @@ vector<const char *> XmlDatabase::getSchema() {
 
     vector<const char *> result;
 
-    for (XMLElement *node = pRoot->FirstChildElement("Schema"); node != 0; node = node->NextSiblingElement()) {
-        for (XMLElement *child = node->FirstChildElement(); child != 0; child = child->NextSiblingElement()) {
+    for (XMLElement *node = pRoot->FirstChildElement("Schema"); node != nullptr; node = node->NextSiblingElement()) {
+        for (XMLElement *child = node->FirstChildElement(); child != nullptr; child = child->NextSiblingElement()) {
             result.push_back(child->Name());
         }
         break;
@@ -179,8 +179,7 @@ bool XmlDatabase::removeColumn(const char *name) {
         return false;
     }
 
-    for (XMLElement *pSchema = pRoot->FirstChildElement("Schema");
-         pSchema != 0; pSchema = pSchema->NextSiblingElement()) {
+    for (XMLElement *pSchema = pRoot->FirstChildElement("Schema"); pSchema != nullptr; pSchema = pSchema->NextSiblingElement()) {
         XMLElement *child = pSchema->FirstChildElement(name);
         if (child) {
             pSchema->DeleteChild(child);
@@ -200,7 +199,7 @@ bool XmlDatabase::insertColumn(const char *name) {
         return false;
     }
 
-    for (XMLElement *node = pRoot->FirstChildElement("Schema"); node != 0; node = node->NextSiblingElement()) {
+    for (XMLElement *node = pRoot->FirstChildElement("Schema"); node != nullptr; node = node->NextSiblingElement()) {
         XMLElement *pElement = XmlDatabase::xmlDocument.NewElement(name);
         node->InsertEndChild(pElement);
     }
@@ -225,7 +224,7 @@ XMLNode *XmlDatabase::xmlFindRecordById(const char *id) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
 
-    for (XMLElement *node = pRoot->FirstChildElement("Record"); node != 0; node = node->NextSiblingElement()) {
+    for (XMLElement *node = pRoot->FirstChildElement("Record"); node != nullptr; node = node->NextSiblingElement()) {
         XMLElement *child = node->FirstChildElement("ID");
         if (child->GetText() && strcmp(child->GetText(), id) == 0) {
             return child->Parent();
@@ -245,7 +244,7 @@ Record *XmlDatabase::findRecordById(const char *id) {
 
     Record *record = new Record();
 
-    for (XMLElement *child = node->FirstChildElement(); child != 0; child = child->NextSiblingElement()) {
+    for (XMLElement *child = node->FirstChildElement(); child != nullptr; child = child->NextSiblingElement()) {
         Column *column = new Column(child->Name(), child->GetText());
         record->addColumn(column);
     }
@@ -261,7 +260,7 @@ void XmlDatabase::update(Record *record) {
     if (node) {
         vector<Column *> columns = record->getColumns();
         for (auto column : columns) {
-            for (XMLElement *child = node->FirstChildElement(); child != 0; child = child->NextSiblingElement()) {
+            for (XMLElement *child = node->FirstChildElement(); child != nullptr; child = child->NextSiblingElement()) {
                 if (strcmp(child->Name(), column->getKey()) == 0 && column->getValue()) {
                     child->SetText(column->getValue());
                 }
@@ -280,10 +279,10 @@ list<Record *> XmlDatabase::select() {
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
     list<Record *> result;
 
-    for (XMLElement *node = pRoot->FirstChildElement("Record"); node != 0; node = node->NextSiblingElement()) {
+    for (XMLElement *node = pRoot->FirstChildElement("Record"); node != nullptr; node = node->NextSiblingElement()) {
         Record *record = new Record(indexRow++);
         indexColumn = 0;
-        for (XMLElement *child = node->FirstChildElement(); child != 0; child = child->NextSiblingElement()) {
+        for (XMLElement *child = node->FirstChildElement(); child != nullptr; child = child->NextSiblingElement()) {
 
             Column *column = new Column(child->Name(), child->GetText(), indexColumn++);
             record->addColumn(column);

@@ -10,11 +10,13 @@ CMakeFiles/xmlDatabase.dir/dataset.cpp.o
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.cpp
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/icolumn.h
+ /Users/bpawluczuk/Sites/cpp/xmlDatabase/irecord.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
 CMakeFiles/xmlDatabase.dir/main.cpp.o
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/column.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/icolumn.h
+ /Users/bpawluczuk/Sites/cpp/xmlDatabase/irecord.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/main.cpp
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/tinyxml2-master/tinyxml2.h
@@ -22,12 +24,14 @@ CMakeFiles/xmlDatabase.dir/main.cpp.o
 CMakeFiles/xmlDatabase.dir/record.cpp.o
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/column.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/icolumn.h
+ /Users/bpawluczuk/Sites/cpp/xmlDatabase/irecord.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.cpp
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
 CMakeFiles/xmlDatabase.dir/xmlDatabase.cpp.o
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/column.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/icolumn.h
+ /Users/bpawluczuk/Sites/cpp/xmlDatabase/irecord.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/tinyxml2-master/tinyxml2.cpp
  /Users/bpawluczuk/Sites/cpp/xmlDatabase/tinyxml2-master/tinyxml2.h

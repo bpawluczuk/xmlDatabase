@@ -48,7 +48,7 @@ int main() {
      */
     list<Record *> resultSearch = db.select(whereRecord);
 
-    // Update zawartości rekordu
+    // Edycja zawartości rekordu
     Record *recordUpdate = new Record();
     recordUpdate->addColumn(new Column("ID", "1")); //ID rekordu który edytujemy
     recordUpdate->addColumn(new Column("Desc", "nowy opis przedmiotu"));
