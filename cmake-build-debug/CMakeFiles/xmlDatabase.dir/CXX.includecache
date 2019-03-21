@@ -12,10 +12,6 @@ iostream
 icolumn.h
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/icolumn.h
 
-/Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.cpp
-dataset.h
-/Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.h
-
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/dataset.h
 record.h
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
@@ -47,10 +43,6 @@ vector
 -
 xmlDatabase.h
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/xmlDatabase.h
-
-/Users/bpawluczuk/Sites/cpp/xmlDatabase/record.cpp
-record.h
-/Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
 
 /Users/bpawluczuk/Sites/cpp/xmlDatabase/record.h
 map
