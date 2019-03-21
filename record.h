@@ -32,6 +32,12 @@ public:
     void addColumn(Column *column);
 
     /**
+     * @brief addColumns
+     * @param column
+     */
+    void addColumns(vector<Column *> columns);
+
+    /**
      * Get column names from database schema
      * @return
      */

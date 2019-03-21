@@ -11,6 +11,12 @@ void Record::addColumn(Column *column) {
     Record::columns.push_back(column);
 }
 
+void Record::addColumns(vector<Column *> columns){
+    for(Column *column: columns){
+        Record::columns.push_back(column);
+    }
+}
+
 vector<Column *> Record::getColumns() {
     return Record::columns;
 }
@@ -30,7 +36,7 @@ const char *Record::getColumnValue(const char *name) {
             return column->getValue();
         }
     }
-    return nullptr;
+    return "";
 }
 
 void Record::updateColumnValue(const char *key, const char *value) {

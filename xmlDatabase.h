@@ -31,10 +31,10 @@ public:
 
     /**
      * Connect to database file *.xml
-     * @param name
+     * @param path
      * @return
      */
-    int connect(const char *name);
+    int connect(const char *path);
 
     /**
      * Create database file *.xml
@@ -106,7 +106,13 @@ public:
      * @param name
      * @return
      */
-    const char *getDatabasePath(const char *name);
+    const char *getDatabasePath();
+
+    /**
+     * @brief setDatabasePath
+     * @param path
+     */
+    void setDatabasePath(const char *path);
 
     /**
      * Get data set
@@ -114,16 +120,22 @@ public:
      */
     DataSet getDataSet();
 
+    /**
+     * @brief getIndexCount
+     * @return
+     */
+    int getIndexCount();
+
 private:
 
     const char *dbName;
     const char *dbPath;
     XMLDocument xmlDocument;
     DataSet dataSet;
-    void saveFile(const char *name);
-    bool createDatabaseDirectory();
+    void saveFile();
     bool columnExist(const char *name);
     Record *findRecordById(const char *id);
     XMLNode *xmlGetRootNode();
     XMLNode *xmlFindRecordById(const char *id);
+    vector<string> getDatabaseList(const char *path);
 };

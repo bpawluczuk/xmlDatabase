@@ -7,6 +7,9 @@
 #include "xmlDatabase.h"
 #include "tinyxml2-master/tinyxml2.h"
 #include "tinyxml2-master/tinyxml2.cpp"
+#include <stdio.h>
+#include <string.h>
+#include "dirent.h"
 
 using namespace std;
 using namespace tinyxml2;
@@ -16,72 +19,99 @@ XMLNode *XmlDatabase::xmlGetRootNode() {
     return pRoot;
 }
 
-const char *XmlDatabase::getDatabasePath(const char *name) {
-    return (string("/Users/bpawluczuk/database/") + string(name)).c_str();
+const char *XmlDatabase::getDatabasePath() {
+    return XmlDatabase::dbPath;
 }
 
-int XmlDatabase::connect(const char *name) {
+void XmlDatabase::setDatabasePath(const char *path) {
+    XmlDatabase::dbPath = path;
+}
 
-    const char *path = XmlDatabase::getDatabasePath(name);
+int XmlDatabase::connect(const char *path) {
+
+    XmlDatabase::setDatabasePath(path);
 
     XMLError result = XmlDatabase::xmlDocument.LoadFile(path);
     if (result != XML_SUCCESS) {
-        cout << "Unable connect to database " << XmlDatabase::getDatabasePath(name) << endl;
+        cout << "Unable connect to database " << XmlDatabase::getDatabasePath() << endl;
         return false;
     }
-
-    XmlDatabase::dbName = name;
 
     XMLNode *root = XmlDatabase::xmlGetRootNode();
     if (root == nullptr) {
-        cout << "Wrong format database " << name << endl;
+        cout << "Wrong format database " << XmlDatabase::getDatabasePath() << endl;
         return false;
     }
 
-    cout << "Connect to database " << name << endl;
+    cout << "Connect to database " << XmlDatabase::getDatabasePath() << endl;
     return true;
 }
 
 int XmlDatabase::create(const char *name) {
 
+    XmlDatabase::setDatabasePath(name);
     XMLNode *pRoot = XmlDatabase::xmlDocument.NewElement("Database");
     XmlDatabase::xmlDocument.InsertFirstChild(pRoot);
 
-    XMLNode *pShema = XmlDatabase::xmlDocument.NewElement("Schema");
+    XMLElement *pShema = XmlDatabase::xmlDocument.NewElement("Schema");
     pRoot->InsertFirstChild(pShema);
+    pShema->SetAttribute("autoincrement", "0");
 
     XMLNode *pId = XmlDatabase::xmlDocument.NewElement("ID");
     pShema->InsertFirstChild(pId);
 
-    XmlDatabase::createDatabaseDirectory();
-    XmlDatabase::saveFile(name);
+    XmlDatabase::saveFile();
 
     return true;
 }
 
-bool XmlDatabase::createDatabaseDirectory() {
+vector<string> XmlDatabase::getDatabaseList(const char *path){
 
-    if (mkdir("/Users/bpawluczuk/database", 0777) == -1) {
-        cerr << "Error :  " << strerror(errno) << endl;
-        return false;
-    } else {
-        cout << "Directory created";
-        return true;
+    struct dirent *entry;
+    vector<string> fileList;
+
+    DIR *dir = opendir(path);
+    if (dir == nullptr) {
+        return fileList;
+    }
+
+    while ((entry = readdir(dir)) != nullptr) {
+        printf("%s\n",entry->d_name);
+        fileList.push_back(string(entry->d_name));
+    }
+
+    closedir(dir);
+    return fileList;
+}
+
+void XmlDatabase::saveFile() {
+
+    XMLError error = XmlDatabase::xmlDocument.SaveFile(XmlDatabase::getDatabasePath());
+    if (error) {
+        cout << "Can't save file: " << XmlDatabase::getDatabasePath() << endl;
     }
 }
 
-void XmlDatabase::saveFile(const char *name) {
+int XmlDatabase::getIndexCount(){
 
-    XMLError error = XmlDatabase::xmlDocument.SaveFile(XmlDatabase::getDatabasePath(name));
-    if (error) {
-        cout << "Can't save file: " << XmlDatabase::getDatabasePath(name) << endl;
-    }
+    XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
+
+    XMLElement *node = pRoot->FirstChildElement("Schema");
+    const char *increment = node->Attribute("autoincrement");
+
+    int inc = atoi(increment);
+    inc++;
+
+    node->SetAttribute("autoincrement",  inc);
+    XmlDatabase::saveFile();
+
+    return inc;
 }
 
 int XmlDatabase::insert(Record *record) {
 
     XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
-    int count = XmlDatabase::columnCount() + 1;
+    int count = XmlDatabase::getIndexCount();
 
     XMLElement *pNode = XmlDatabase::xmlDocument.NewElement("Record");
     pNode->SetAttribute("type", "record");
@@ -96,7 +126,7 @@ int XmlDatabase::insert(Record *record) {
         }
 
         for (auto column : record->getColumns()) {
-            if (strcmp(schema, column->getKey()) == 0 && column->getValue()) {
+            if (strcmp(schema, column->getKey()) == 0 && column->getValue() && strcmp(schema, "ID") != 0) {
                 pElement->SetText(column->getValue());
             }
         }
@@ -104,21 +134,13 @@ int XmlDatabase::insert(Record *record) {
         pNode->InsertEndChild(pElement);
     }
 
-    XmlDatabase::saveFile(XmlDatabase::dbName);
+    XmlDatabase::saveFile();
 
     return true;
 }
 
 int XmlDatabase::columnCount() {
-
-    XMLNode *pRoot = XmlDatabase::xmlGetRootNode();
-
-    int inc = 0;
-    for (XMLElement *child = pRoot->FirstChildElement("Record"); child != 0; child = child->NextSiblingElement()) {
-        inc += 1;
-    }
-
-    return inc;
+    return XmlDatabase::getSchema().size();
 }
 
 bool XmlDatabase::columnExist(const char *name) {
@@ -165,7 +187,7 @@ bool XmlDatabase::removeColumn(const char *name) {
         }
     }
 
-    XmlDatabase::saveFile(XmlDatabase::dbName);
+    XmlDatabase::saveFile();
 
     return true;
 }
@@ -183,7 +205,7 @@ bool XmlDatabase::insertColumn(const char *name) {
         node->InsertEndChild(pElement);
     }
 
-    XmlDatabase::saveFile(XmlDatabase::dbName);
+    XmlDatabase::saveFile();
 
     return true;
 }
@@ -195,7 +217,7 @@ void XmlDatabase::remove(const char *id) {
 
     if (node) {
         pRoot->DeleteChild(node);
-        XmlDatabase::saveFile(XmlDatabase::dbName);
+        XmlDatabase::saveFile();
     }
 }
 
@@ -205,7 +227,7 @@ XMLNode *XmlDatabase::xmlFindRecordById(const char *id) {
 
     for (XMLElement *node = pRoot->FirstChildElement("Record"); node != 0; node = node->NextSiblingElement()) {
         XMLElement *child = node->FirstChildElement("ID");
-        if (strcmp(child->GetText(), id) == 0) {
+        if (child->GetText() && strcmp(child->GetText(), id) == 0) {
             return child->Parent();
         }
     }
@@ -246,7 +268,7 @@ void XmlDatabase::update(Record *record) {
             }
         }
 
-        XmlDatabase::saveFile(XmlDatabase::dbName);
+        XmlDatabase::saveFile();
     }
 }
 
@@ -278,19 +300,46 @@ list<Record *> XmlDatabase::select(Record *where) {
 
     list<Record *> result;
     bool addRecord = false;
-    const char *word;
+    bool isEmptyWhere = true;
+    bool isDiferenceWhere = true;
+    string word;
+    string columnValue;
+    const char *columnKey;
+    vector<bool> compareWhere;
+
+    for (auto column: where->getColumns()) {
+        if(!string(column->getValue()).empty() && strcmp(column->getKey(), "ID") != 0){
+            isEmptyWhere = false;
+        }
+    }
 
     for (auto record: XmlDatabase::select()) {
+        addRecord = false;
+
         for (auto column: record->getColumns()) {
-            word = where->getColumnValue(column->getKey());
-            if (word != nullptr && column->getValue() != nullptr && strstr(column->getValue(), word) != nullptr) {
+            columnKey = column->getKey();
+            columnValue = string(column->getValue());
+            word = string(where->getColumnValue(columnKey));
+            if (strcmp(columnKey, "ID") == 0) {
+                continue;
+            }
+
+            if (columnValue.find(word) != string::npos && !word.empty()) {
                 addRecord = true;
-            } else if (word != nullptr) {
-                addRecord = false;
             }
         }
 
-        if (addRecord) {
+        isDiferenceWhere = false;
+        for (auto column: record->getColumns()) {
+            columnKey = column->getKey();
+            columnValue = string(column->getValue());
+            word = string(where->getColumnValue(columnKey));
+            if(columnValue.find(word) == string::npos && !word.empty() && strcmp(column->getKey(), "ID") != 0){
+                isDiferenceWhere = true;
+            }
+        }
+
+        if ((addRecord  && !isDiferenceWhere) || isEmptyWhere){
             result.push_back(record);
         }
     }

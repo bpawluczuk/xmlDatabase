@@ -11,11 +11,19 @@ Column::Column(const char *key, const char *value, int index){
 }
 
 void Column::setKey(const char *key) {
-    Column::key = key;
+    if(key){
+        Column::key = key;
+    }else{
+        Column::key = "";
+    }
 }
 
 void Column::setValue(const char *value) {
-    Column::value = value;
+    if(value){
+        Column::value = value;
+    }else{
+        Column::value = "";
+    }
 }
 
 const char *Column::getKey() const {

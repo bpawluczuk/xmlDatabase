@@ -8,6 +8,7 @@
 #endif //XMLDATABASE_COLUMN_H
 
 #include <iostream>
+#include "icolumn.h"
 
 using namespace std;
 
@@ -19,7 +20,7 @@ using namespace std;
  * value column,
  * number column
  */
-class Column {
+class Column : IColumn<const char *, const char *>{
 public:
 
     /**

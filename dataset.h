@@ -18,7 +18,7 @@
 /**
  * class DataSet
  * This class represents data set of database,
- * This class defines data source who is needed for cooperation with table view model
+ * This class defines data source who is needed for cooperation with table view model from QT library
  */
 class DataSet {
 public:
@@ -46,7 +46,7 @@ public:
      * @param indexColumn
      * @return
      */
-    const char *getColumnName(int indexColumn);
+    string getColumnName(int indexColumn);
 
     /**
      * Get cell value by index row and index column
@@ -54,13 +54,17 @@ public:
      * @param indexColumn
      * @return
      */
-    const char *getCellValue(int indexRow, int indexColumn);
+    string getCellValue(int indexRow, int indexColumn);
+
+    string getRecordId(int indexRow);
+
+    vector<string> columnNames;
+
+    vector<vector<string>> rows;
 
 private:
 
     list<Record *> records;
-    vector<const char *> columnNames;
-    vector<vector<const char *>> rows;
     int columnCount;
     int rowsCount;
 };
